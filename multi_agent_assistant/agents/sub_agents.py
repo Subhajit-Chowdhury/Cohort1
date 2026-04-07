@@ -41,7 +41,7 @@ class TaskAgent(SubAgent):
             "agent": self.name,
             "action": action,
             "result": result,
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
     
     async def create_task(self, title: str, **kwargs) -> Dict[str, Any]:
